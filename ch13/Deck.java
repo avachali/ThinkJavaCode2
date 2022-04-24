@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -52,13 +56,41 @@ public class Deck {
      * Returns a string representation of the deck.
      */
     public String toString() {
-        return "TODO";
+        return Arrays.toString(cards).toString();
     }
 
     /**
      * Randomly permutes the array of cards.
      */
+    // public void shuffle() {
+    //     //topCard = 0;
+
+    //     ArrayList<Card> temp = new ArrayList<Card>();
+	// 	Random random = new Random();
+	// 	// random.nextInt(max - min) + min
+    //     List<Card>  list = (List<Card>) Arrays.asList(cards);
+
+	// 	while (!list.isEmpty()) {
+	// 		int loc = random.nextInt(list.size());
+	// 		temp.add(list.get(loc));
+	// 		list.remove(loc);
+	// 	}
+	// 	//deck = temp;
+	// 	//printDeck(temp);
+    // }
+
     public void shuffle() {
+        //topCard = 0;
+
+        Collections.shuffle(Arrays.asList(this.cards));
+
+        // for (int i = 0; i < cards.length; i++) {
+        //     int loc = random.nextInt(cards.length);
+        //     Card temp = cards[loc];
+        //     cards[loc] = cards[i];
+        //     cards[i] = temp;
+        // }
+
     }
 
     /**

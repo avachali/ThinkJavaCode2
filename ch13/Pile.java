@@ -44,4 +44,8 @@ public class Pile {
         return this.cards.remove(0);
     }
 
+    public int size() {
+        return this.cards.size();
+    }
+
 }
