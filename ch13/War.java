@@ -71,6 +71,7 @@ public class War {
                 }
 
             }
+            
             System.out.println("size of p1: "+p1.size());
             System.out.println("size of p2: "+p2.size());
             System.out.println("size of warList: "+warList.size());
@@ -80,8 +81,10 @@ public class War {
         // display the winner
         if (p2.isEmpty()) {
             System.out.println("Player 1 wins!");
-        } else {
+        } else if (p1.isEmpty()) {
             System.out.println("Player 2 wins!");
+        } else {
+            System.out.println("TIE!");
         }
     }
 
