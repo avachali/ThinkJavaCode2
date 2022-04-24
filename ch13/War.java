@@ -31,10 +31,9 @@ public class War {
             System.out.println("C1: "+ c1.toString());
             System.out.println("C2: "+ c2.toString());
 
-
             // compare the cards
             int diff = c1.getRank() - c2.getRank();
-            if (diff > 0) {
+            if (diff > 0) { //player 1 won - gets all cards incl war list
                 p1.addCard(c1);
                 p1.addCard(c2);
                 if (warList.size() > 0) {
@@ -43,15 +42,14 @@ public class War {
                         
                         
                     }
-                    warList.clear();
+                    warList.clear();//remove all from warlist
                 }
             } else if (diff < 0) {
                 p2.addCard(c1);
                 p2.addCard(c2);
                 if (warList.size() > 0) {
                     for (Card card : warList) {
-                        p1.addCard(card);
-                        
+                        p2.addCard(card);
                         
                     }
                     warList.clear();
@@ -75,6 +73,8 @@ public class War {
             }
             System.out.println("size of p1: "+p1.size());
             System.out.println("size of p2: "+p2.size());
+            System.out.println("size of warList: "+warList.size());
+
         }
 
         // display the winner
